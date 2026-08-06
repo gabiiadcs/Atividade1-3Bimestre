@@ -1,18 +1,12 @@
-let alterado = false
+let titulo = document.querySelector("h1");
+let botao = document.querySelector("button");
 
-function alterarTexto(){
+botao.addEventListener("click", alterarTituloPrincipal);
 
-    const titulo = document.getElementById("titulo")
-
-    if(alterado == false){
-
-        titulo.textContent = "Atividade de Revisão."
-        alterado = true
-
-    }else{
-
-        titulo.textContent = "Revisão da alteração do HTML utilizando Javascript."
-        alterado = false
-
-        }
+function alterarTituloPrincipal() {
+    if (titulo.innerText === "Revisão da alteração do HTML utilizando Javascript") {
+        titulo.innerText = "Fui alterado pelo botão";
+    } else {
+        titulo.innerText = "Revisão da alteração do HTML utilizando Javascript";
     }
+}
